@@ -71,10 +71,25 @@ Full discussion of model selection, class imbalance handling, and feature import
 ```bash
 git clone https://github.com/ZambitoW/ipo-predictor.git
 cd ipo-predictor
-docker compose up
 ```
 
-Frontend at `http://localhost:3000`, FastAPI backend at `http://localhost:8000`.
+**Backend:**
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+**Frontend:**
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Add a `.env` file in `backend/` with:
 
 ---
 
